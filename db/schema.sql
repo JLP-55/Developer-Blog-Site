@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS mvc_test_db;
+CREATE DATABASE mvc_test_db;
