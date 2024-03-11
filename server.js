@@ -26,13 +26,13 @@ app.use(express.urlencoded ({extended: true}));
 app.use(routes);
 
 // serves up all static files, html, css, etc.
-// app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "public")));
 
 // static assets for home
-app.get("/", (req, resp) => {
-	resp.sendFile(path.join(__dirname, "./public/html/index.html"));
-	console.log("viewing home page");
-});
+// app.get("/", (req, resp) => {
+// 	resp.sendFile(path.join(__dirname, "./public/html/index.html"));
+// console.log("viewing home page");
+// });
 
 // static assets for login
 app.get("/login", (req, resp) => {
