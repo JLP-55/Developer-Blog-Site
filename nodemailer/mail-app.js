@@ -1,7 +1,7 @@
 require("dotenv").config();
 const nodeMailer = require("nodemailer");
 
-async function mailFunction() {
+async function nodeMailer() {
 
 	const emailContent = `
 	<p>This is the content of the email!</p>
@@ -29,6 +29,6 @@ async function mailFunction() {
 	console.log("message sent: " + info.messageId);
 };
 
-mailFunction().catch(error => console.log(error));
+nodeMailer().catch(error => console.log(error));
 
-module.exports = mailFunction;
+module.exports = nodeMailer;
