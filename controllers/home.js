@@ -15,7 +15,7 @@ router.get("/", async (req, resp) => {
 
 	resp.sendFile(path.join(__dirname, "../public/html/index.html"));
 	// resp.sendFile(path.join(__dirname, "../views/layouts/main.handlebars"));
-	console.log("viewing home page");
+	// console.log("viewing home page");
 });
 
 module.exports = router;

@@ -12,6 +12,7 @@ const routes = require("./controllers"); /*use this variable to access all route
 
 // const expressHandlebars = require("express-handlebars"); /*Template engine*/
 
+const sequelize = require("./config/connection");
 	
 // const db = require("./config/connection"); /*connect to the database*/
 
@@ -26,7 +27,7 @@ app.use(express.urlencoded ({extended: true}));
 app.use(routes);
 
 // serves up all static files, html, css, etc.
-app.use(express.static(path.join(__dirname, "public")));
+// app.use(express.static(path.join(__dirname, "./public/")));
 
 // static assets for home
 // app.get("/", (req, resp) => {
@@ -35,10 +36,14 @@ app.use(express.static(path.join(__dirname, "public")));
 // });
 
 // static assets for login
-app.get("/login", (req, resp) => {
-	resp.sendFile(path.join(__dirname, "./public/html/login.html"));
-	console.log("viewing login page");
-});
+// app.get("/login", (req, resp) => {
+// 	resp.sendFile(path.join(__dirname, "./public/html/login.html"));
+// 	console.log("viewing login page");
+// });
+
+// sequelize.sync({force: false}).then(() => {
+// 	app.listen(PORT, () => console.log(`app is listening at http://localhost/${PORT}`));
+// });
 
 app.listen(PORT, () => {
 	console.log(`app is listening at http://localhost/${PORT}`);
