@@ -4,7 +4,7 @@
 const router = require("express").Router();
 const path = require("path");
 
-const mail= require("nodeMailer");
+// const mail= require("nodeMailer");
 
 router.get("/", async (req, resp) => {
 	// try {
