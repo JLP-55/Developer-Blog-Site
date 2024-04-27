@@ -1,5 +1,7 @@
 const express = require("express"); /*Express will be used to do all out routing, ie; get post etc.*/
 const sequelize = require("./config/connection");
+const session = require("express-session");
+const SequelizeStore = require("connect-session-sequelize")(session.Store);
 
 const path = require("path"); /*The path parameter enables us to reach api endpoints.*/
 
@@ -7,8 +9,6 @@ const routes = require("./controllers"); /*use this variable to access all route
 
 const app = express(); /*app = an instance of express*/ 
 const PORT = process.env.PORT || 3001; /*listen at PORT*/ 
-
-app.use(routes);
 
 // middleware
 app.use(express.json());
