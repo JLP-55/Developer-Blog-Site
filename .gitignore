@@ -1,6 +1,3 @@
 node_modules
 .DS_Store
 .env
-.sublime-project
-sublime_debugger_trial.sublime-project
-sublime_debugger_trial.sublime-workspace

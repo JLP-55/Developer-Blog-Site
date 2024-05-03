@@ -18,12 +18,8 @@ app.use(routes);
 // serves up all static files, html, css, etc.
 app.use(express.static(path.join(__dirname, "public")));
 
-// static assets for login
-// app.get("/login", (req, resp) => {
-// 	resp.sendFile(path.join(__dirname, "./public/html/login.html"));
-// 	console.log("viewing login page");
-// });
-
+// comment the sequelize.sync out to not get an error and connect to the database
+// clearly having trouble syncing the models to the database
 sequelize.sync({force: false}).then(() => {
 	app.listen(PORT, () => {
 		console.log(`app is listening at http://localhost/${PORT}`);

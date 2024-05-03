@@ -6,29 +6,8 @@ const path = require("path");
 const {Post, User} = require("../models");
 
 router.get("/", async (rq, rs) => {
-	// try {
-	// 	resp.status(200).mail();
-	// } catch (err) {
-	// 	resp.status(500).json(err);
-	// };
-
-	try {
-		const postDate = await Post.findAll({
-			include: [
-				{
-					model: User,
-					attributes: ["user_name"]
-				},
-			]
-		})
-	} catch (err) {
-		rs.status(500).json(err);
-		console.log(err);
-	}
-
-	// resp.sendFile(path.join(__dirname, "../public/html/index.html"));
-	// // resp.sendFile(path.join(__dirname, "../views/layouts/main.handlebars"));
-	// console.log("viewing home page");
+	console.log(Post);
+	rs.status(200).json({message: "message"});
 });
 
 module.exports = router;
