@@ -10,7 +10,8 @@ sequelize = new Sequelize(
 	{
 		host: "localhost",
 		dialect: "mysql",
-		port: 3001
+		// port is defined in the server.js
+		// port: 3001
 	}
 );
 
