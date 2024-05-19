@@ -7,8 +7,8 @@ Comment.init (
 	{
 		id: {
 			type: DataTypes.INTEGER,
-			primarykey: true,
 			allowNull: false,
+			primaryKey: true,
 			autoIncrement: true
 		},
 		created_at: {

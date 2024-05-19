@@ -4,15 +4,15 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Main Page</title>
+	{{!-- why is the link to the stylesheet not a direct path? --}}
+	{{!-- expected it to be ../../public/css/style.css --}}
+	<link rel="stylesheet" href="/css/style.css"/>
 </head>
 <body>
 	<h1>Tech blog website</h1>
 	<p>A website about tech blogging</p>
 	<nav>
 		<li>
-			<a href="#">Home</a>
-			<a href="#">Home</a>
-			<a href="#">Home</a>
 			<a href="#">Home</a>
 		</li>
 		<li>
@@ -25,5 +25,6 @@
 			<a href="#">Logout</a>
 		</li>
 	</nav>	
+	{{{body}}}
 </body>
 </html>

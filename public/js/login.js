@@ -1,7 +1,7 @@
 const loginButton = document.getElementById("login-button");
 
-function login() {
+function hello() {
 	console.log("hello");
 }
 
-loginButton.addEventListener("click", login);
+button.addEventListener("click", hello());
