@@ -3,11 +3,41 @@
 // upon creating an account, an email will be sent to the user to confirm their account creation
 const router = require("express").Router();
 const path = require("path");
-const {Post, User} = require("../models");
+const {Post, User, Comment} = require("../models");
 
 router.get("/", async (rq, rs) => {
-	console.log(Post);
-	rs.status(200).json({message: "message"});
+	try {
+		// render the login page from "views" folder
+		rs.render("login");
+		
+	// 	const postData = await Post.findAll({
+	// 		include: [
+	// 			{
+	// 				model: User,
+	// 				attributes: ["user_name"],
+	// 			}
+	// 		]
+		// });
+	// 	const posts = postData.map((post) =>
+	// 		post.get({plain: true})
+	// 	);
+
+	// 	rs.render("homepage", {
+	// 		posts,
+	// 	});
+	} catch (err) {
+		rs.status(500).json(err);
+		console.log(err);
+	}
 });
+
+// router.post("/", async (rq, rs) => {
+// 	try {
+		
+// 	} catch (err) {
+// 		rs.status(500).json(err);
+// 		console.log(err);
+// 	}
+// })
 
 module.exports = router;

@@ -1,6 +1,8 @@
 const router = require("express").Router();
-const pageOne = require("./page.js")
+const loginPage = require("./page.js");
+const postRoutes = require("./post.js");
 
-router.use("/login", pageOne);
+router.use("/login", loginPage);
+router.use("/post", postRoutes);
 
 module.exports = router;
